@@ -21,7 +21,7 @@ SOURCE = "gh-instagram-api"
 SIGN_UP = f"https://dataxapi.com/zh/signin/?button={SOURCE}"
 ENDPOINT = "instagram.users.posts.list"
 PARAM = "username"
-PRICE = Decimal("0.002")  # 现价见 https://dataxapi.com/zh/apis/instagram/users/posts/list/
+PRICE = Decimal("0.002")  # 现价见 https://dataxapi.com/zh/apis/instagram/users/posts/list/?ref=gh-instagram-api
 
 
 def flatten(item: dict, prefix: str = "") -> dict:

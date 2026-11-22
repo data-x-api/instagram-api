@@ -2,41 +2,42 @@
 
 **Instagram API · Instagram profile · Instagram posts and reels · Instagram comments**
 
-这个仓库是 [DataXAPI](https://dataxapi.com/zh/?ref=gh-instagram-api) 的Instagram接口说明和能直接跑的脚本：8 个接口，一把 Key，按次付费，$0.002 起，**出错不收费**。不用登录平台账号，不用 Cookie，不开浏览器。
+这个仓库是 [DataXAPI](https://dataxapi.com/zh/?ref=gh-instagram-api) 的Instagram接口说明和能直接跑的脚本：9 个接口，一把 Key，按次付费，$0.002 起，**出错不收费**。不用登录平台账号，不用 Cookie，不开浏览器。
 
 [免费拿 Key：试用最多 333 次，不用绑卡](https://dataxapi.com/zh/signin/?button=gh-instagram-api) · [全部接口文档](https://dataxapi.com/zh/apis/?ref=gh-instagram-api) · [接进 AI（MCP）](#接进-aimcp) · [English](#english)
 
 最低充 $10，余额不过期；支持支付宝、微信支付和银行卡。
 
-## 全部 8 个接口
+## 全部 9 个接口
 
 ### 评论
 
 | 接口 | 拿到什么 | 价格 | 编号 |
 |---|---|---|---|
-| [Instagram 评论回复](https://dataxapi.com/zh/apis/instagram/comments/replies/list/) | 按评论编号和它所在的帖子短码取一页回复：正文、回复者、发布时间。 | $0.002 一次 | `instagram.comments.replies.list` |
+| [Instagram 评论回复](https://dataxapi.com/zh/apis/instagram/comments/replies/list/?ref=gh-instagram-api) | 按评论编号和它所在的帖子短码取一页回复：正文、回复者、发布时间。 | $0.002 一次 | `instagram.comments.replies.list` |
 
 ### 话题标签
 
 | 接口 | 拿到什么 | 价格 | 编号 |
 |---|---|---|---|
-| [Instagram 话题帖子](https://dataxapi.com/zh/apis/instagram/hashtags/posts/list/) | 按话题名取一页带这个话题的最新 Instagram 帖子，每页约 33 条：文案、作者编号、点赞评论数、发布时间、图片。 | $0.002 一次 | `instagram.hashtags.posts.list` |
+| [Instagram 话题帖子](https://dataxapi.com/zh/apis/instagram/hashtags/posts/list/?ref=gh-instagram-api) | 按话题名取一页带这个话题的最新 Instagram 帖子，每页约 33 条：文案、作者编号、点赞评论数、发布时间、图片。 | $0.002 一次 | `instagram.hashtags.posts.list` |
 
 ### 内容
 
 | 接口 | 拿到什么 | 价格 | 编号 |
 |---|---|---|---|
-| [Instagram 帖子评论](https://dataxapi.com/zh/apis/instagram/posts/comments/list/) | 按帖子短码或链接取一页 Instagram 评论，每页约 15 条，最新在前：正文、评论者、点赞数、发布时间。 | $0.002 一次 | `instagram.posts.comments.list` |
-| [Instagram 帖子详情](https://dataxapi.com/zh/apis/instagram/posts/get/) | 按帖子短码或链接取一条 Instagram 帖子或 Reel：文案、作者、点赞评论播放数、图片和视频地址，联名帖的其他作者。 | $0.002 一次 | `instagram.posts.get` |
-| [Instagram 视频字幕](https://dataxapi.com/zh/apis/instagram/posts/transcript/get/) | 按帖子短码或链接取 Instagram Reel 或视频帖里说的话，全文；只支持两分钟以内的视频。 | $0.002 一次 | `instagram.posts.transcript.get` |
+| [Instagram 帖子评论](https://dataxapi.com/zh/apis/instagram/posts/comments/list/?ref=gh-instagram-api) | 按帖子短码或链接取一页 Instagram 评论，每页约 15 条，最新在前：正文、评论者、点赞数、发布时间。 | $0.002 一次 | `instagram.posts.comments.list` |
+| [Instagram 帖子详情](https://dataxapi.com/zh/apis/instagram/posts/get/?ref=gh-instagram-api) | 按帖子短码或链接取一条 Instagram 帖子或 Reel：文案、作者、点赞评论播放数、图片和视频地址，联名帖的其他作者。 | $0.002 一次 | `instagram.posts.get` |
+| [Instagram 视频字幕](https://dataxapi.com/zh/apis/instagram/posts/transcript/get/?ref=gh-instagram-api) | 按帖子短码或链接取 Instagram Reel 或视频帖里说的话，全文；只支持两分钟以内的视频。 | $0.002 一次 | `instagram.posts.transcript.get` |
+| [Instagram 视频和图片下载地址](https://dataxapi.com/zh/apis/instagram/posts/media/get/?ref=gh-instagram-api) | 给一条 Instagram 帖子或 Reel 的短码或链接，返回它的全部文件地址：视频和它的封面图，多图帖里的每张图片和每段视频（按顺序编号），带宽高和过期时间；过期了再调一次即可。 | $0.002 一次 | `instagram.posts.media.get` |
 
 ### 账号
 
 | 接口 | 拿到什么 | 价格 | 编号 |
 |---|---|---|---|
-| [Instagram 用户资料](https://dataxapi.com/zh/apis/instagram/users/get/) | 按账号名取 Instagram 用户资料：显示名、简介、粉丝数、关注数、是否认证、是否私密，主页上的网站和链接。 | $0.002 一次 | `instagram.users.get` |
-| [Instagram 用户帖子](https://dataxapi.com/zh/apis/instagram/users/posts/list/) | 按账号名取一页 Instagram 用户发布的帖子，每页 12 条，可只要 Reels：文案、点赞评论播放数、发布时间、图片和视频地址，联名帖的其他作者。 | $0.002 一次 | `instagram.users.posts.list` |
-| [Instagram 用户搜索](https://dataxapi.com/zh/apis/instagram/users/search/) | 按关键词搜索 Instagram 账号，一次约 50 个，不翻页：账号名、显示名、头像、是否认证、是否私密。 | $0.004 一次 | `instagram.users.search` |
+| [Instagram 用户资料](https://dataxapi.com/zh/apis/instagram/users/get/?ref=gh-instagram-api) | 按账号名取 Instagram 用户资料：显示名、简介、粉丝数、关注数、是否认证、是否私密，主页上的网站和链接。 | $0.002 一次 | `instagram.users.get` |
+| [Instagram 用户帖子](https://dataxapi.com/zh/apis/instagram/users/posts/list/?ref=gh-instagram-api) | 按账号名取一页 Instagram 用户发布的帖子，每页 12 条，可只要 Reels：文案、点赞评论播放数、发布时间、图片和视频地址，联名帖的其他作者。 | $0.002 一次 | `instagram.users.posts.list` |
+| [Instagram 用户搜索](https://dataxapi.com/zh/apis/instagram/users/search/?ref=gh-instagram-api) | 按关键词搜索 Instagram 账号，一次约 50 个，不翻页：账号名、显示名、头像、是否认证、是否私密。 | $0.004 一次 | `instagram.users.search` |
 
 ## 真实返回长什么样
 
@@ -151,4 +152,4 @@ No platform account, cookie or QR login. Paid per call from $0.002; errors are n
 
 MIT
 
-<sub>接口和价格取自 DataXAPI 的目录 720fc3ea8dadb865、价格版本 19；以 [dataxapi.com/zh/apis](https://dataxapi.com/zh/apis/?ref=gh-instagram-api) 为准。</sub>
+<sub>接口和价格取自 DataXAPI 的目录 dc959672dd18e2d0、价格版本 21；以 [dataxapi.com/zh/apis](https://dataxapi.com/zh/apis/?ref=gh-instagram-api) 为准。</sub>
